@@ -1,0 +1,39 @@
+<div class="displayBooks">
+
+    <div *ngIf="!BookList || BookList?.length == 0" class="alert alert-danger" role="alert">
+        there is no book in the booklist, please save a book first.
+    </div>
+
+    <div *ngIf="BookList?.length > 0" class="mt-2">
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary">Author wise book list</li>
+            <ng-container *ngFor="let book of BookList | Sort: 'Author'; let i = index">
+                <li class="list-group-item">
+                    <span class="col-4 text-left">Title: {{book?.Title}}</span>
+                    <span class="col-4 text-left">Author: {{book?.Author}}</span>
+                    <span class="col-4 text-left">Publisher: {{book.Publisher}}</span>
+                </li>
+            </ng-container>
+        </ul>
+
+    </div>
+    
+    <div *ngIf="BookList?.length > 0" class="mt-5">
+
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary">Publisher wise book list</li>
+            <ng-container *ngFor="let book of BookList | Sort: 'Publisher'; let i = index">
+                <li class="list-group-item">
+                    <span class="col-4 text-left">Title: {{book?.Title}}</span>
+                    <span class="col-4 text-left">Author: {{book?.Author}}</span>
+                    <span class="col-4 text-left">Publisher: {{book.Publisher}}</span>
+                </li>
+            </ng-container>
+        </ul>
+
+    </div>
+
+    
+
+</div>

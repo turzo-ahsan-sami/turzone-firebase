@@ -5,10 +5,10 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": [
@@ -16,11 +16,11 @@
     ],
     "lib": [
       "es2018",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "types": [
+      "underscore"
     ]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
   }
 }

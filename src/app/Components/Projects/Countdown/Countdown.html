@@ -1,0 +1,41 @@
+<Navbar></Navbar>
+
+<div class="container">
+
+<div class="input-group mt-5 mb-5">
+
+<div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Minute</span>
+</div>
+<input type="number" min="0" [(ngModel)]="minute" class="form-control" placeholder="Minute" aria-label="Minute" aria-describedby="basic-addon1">
+
+<div class="input-group-prepend ml-2">
+    <span class="input-group-text" id="basic-addon1">Second</span>
+</div>
+<input type="number" min="0" [(ngModel)]="second" class="form-control" placeholder="Second" aria-label="Second" aria-describedby="basic-addon1">
+
+<button class="btn btn-success ml-2" (click)="StartCounter()">Start</button>
+<button class="btn btn-danger ml-2" (click)="StopCounter()">Stop</button>
+<button class="btn btn-secondary ml-2" (click)="ResetCounter()">Reset</button>
+
+</div>
+
+
+
+<div class="jumbotron">    
+<div style="text-align: center">
+
+    <h1 *ngIf="message">{{ message }}</h1>
+    
+    <h1> {{ counter | async}} </h1>
+    
+</div>    
+</div>
+
+
+</div>
+
+
+
+
+
