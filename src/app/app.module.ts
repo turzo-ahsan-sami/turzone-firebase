@@ -9,12 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { Home } from './Components/Home/Home';
+import { Resume } from './Components/Resume/Resume';
 import { Navbar } from './Components/Navbar/Navbar';
 import { NotFound } from './Components/NotFound/NotFound';
 
-import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
 
-// Booklist
+// Projects
+import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
 import { BookList } from './Components/Projects/BookList/BookList';
 import { DisplayBookList } from './Components/Projects/BookList/DisplayBookList/DisplayBookList';
 import { BookEntryForm } from './Components/Projects/BookList/BookEntryForm/BookEntryForm';
@@ -47,7 +48,7 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
       AppComponent,
 
       // Components
-      Home, Navbar, NotFound, VocabHelper, Countdown,
+      Home, Resume, Navbar, NotFound, VocabHelper, Countdown,
 
       BookList, DisplayBookList, BookEntryForm,
 
