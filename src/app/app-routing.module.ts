@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 
 import { Home } from './Components/Home/Home';
-import { Navbar } from './Components/Navbar/Navbar';
+import { Resume } from './Components/Resume/Resume';
 import { NotFound } from './Components/NotFound/NotFound';
 
 import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
@@ -17,6 +17,7 @@ const APP_ROUTES: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   { path: 'home', pathMatch: 'full', component: Home },
+  { path: 'resume', pathMatch: 'full', component: Resume },
 
   { path: 'vocabhelper', pathMatch: 'full', component: VocabHelper },
   { path: 'booklist', pathMatch: 'full', component: BookList },

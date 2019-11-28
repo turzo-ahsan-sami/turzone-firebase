@@ -1,0 +1,98 @@
+.outerbox {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.outerbox .innerbox {
+     width: 85%;       
+}
+.innerbox {
+    display: inline;
+    float: left;
+    height: 700px;       
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.bluetable td, .bluetable th {
+    border: 1px solid #758796;
+    padding: 3px;
+}
+.bluetable {
+    font-family: sans-serif;
+}
+.bluetable tbody tr td {
+    background-color: #eff3fa;
+    color: #262c31;
+    font-size: 11px;
+}
+.bluetable tbody tr.odd td {
+    background-color: #d6e0ef;
+}
+.bluetable thead tr th,
+.bluetable thead tr td,
+.bluetable tfoot tr th, 
+.bluetable tfoot tr td {
+    background-color: #8ca8ce;
+    color: #121517;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #e8ebee;
+}
+
+
+
+
+.table-fixed-head,
+.table-fixed-head thead,
+.table-fixed-head tfoot,
+.table-fixed-head tbody,
+.table-fixed-head tr,
+.table-fixed-head th,
+.table-fixed-head td {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: top;
+}
+.table-fixed-head {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table-fixed-head-wrapper,
+.table-fixed-head-wrapper .fht-thead,
+.table-fixed-head-wrapper .fht-tfoot,
+.table-fixed-head-wrapper .fht-fixed-column .fht-tbody,
+.table-fixed-head-wrapper .fht-fixed-body .fht-tbody,
+.table-fixed-head-wrapper .fht-tbody {
+    overflow: hidden;
+    position: relative;
+}
+.table-fixed-head-wrapper .fht-fixed-body .fht-tbody,
+.table-fixed-head-wrapper .fht-tbody {
+    overflow: auto;
+}
+.table-fixed-head-wrapper .table-fixed-head .fht-cell {
+    overflow: hidden;
+    height: 1px;
+}
+.table-fixed-head-wrapper .fht-fixed-column,
+.table-fixed-head-wrapper .fht-fixed-body {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.table-fixed-head-wrapper .fht-fixed-column {
+    z-index: 1;
+}

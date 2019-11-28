@@ -1,0 +1,184 @@
+.panel {
+    margin-bottom: 20px;
+    background-color: $backColor;
+    border: 1px solid $darkBorder;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    
+    
+    .panel-heading {
+        position: relative;
+        color: black;
+        padding: 5px 15px;
+        background: #F2F2F2;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+
+        .panel-control{
+            position: absolute;
+            height: 30px;
+            top: 5px;
+            right: 10px;
+            display: inline-block;
+        }
+    }
+}
+
+.panel-inverse{
+    border-bottom: 1px solid #D4D4D4;
+    
+    .panel-heading{
+        border-color: 1px solid #D4D4D4;
+        background: #F5F5F5!important;
+    }
+}
+
+.panel-gray{
+
+    background: $grayBack;
+    margin: 0px;
+    padding: 0px;
+    // opacity: 0.95;
+    border: 4px solid darken($grayBack,10%);
+
+    .panel-body{
+        margin: 5px 25px 5px 5px;
+        padding: 5px;
+        max-height: 300px;
+        overflow: auto;
+    }
+
+    .table{
+        background: $grayBack!important;
+        tbody, th, td{
+            color:darken($grayBack,50%)!important;
+            background: $grayBack!important; 
+            border-top: 1px solid darken($grayBack,10%);     
+            border-color:  darken($grayBack,10%)!important;     
+        }
+        thead tr:first-child{
+            border-bottom: 2px solid darken($grayBack,15%)!important; 
+            border-color: darken($grayBack,5%)!important;           
+        }
+    }
+
+    .control{
+        color: darken($grayBack,50%)!important;
+        position: absolute;
+        top:5px;
+        right: 5px;
+        cursor: pointer;
+    }
+    .fa-window-close:hover{
+        color: darken($grayBack,50%)!important;
+    }
+
+    input{
+        background: $grayBack!important;
+        border: transparent;
+        color:darken($grayBack,50%)!important;
+        font-size: 13px;
+    }
+}
+
+
+.rightPanel{
+    position: fixed;
+    top:36px;
+    height: 98vh;
+    background-color: $backColor;
+    border-left: 1px solid darken($borderColor,5%);
+    width: 70%;
+    z-index: 999;
+    box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    .fa{
+        cursor: pointer;
+        font-size: 22px;
+        margin-right: 6px;
+    }
+
+    .rightPanel-footer{
+        position: absolute;
+        bottom:22px;
+        width: 100%;
+        padding: 5px 0px;
+        text-align: center;
+        min-height:40px;
+        background-color: darken($backColor,2%);
+        border-top: 1px solid darken($borderColor,5%);
+    }
+    
+    
+}
+
+.NoFooter{
+    .rightPanel-content{
+        max-height: 90vh!important;
+    }
+}
+
+.rightPanel-head{
+    display: block;
+    min-height: 36px;
+    background-color: darken($backColor,2%);
+    border-bottom: 1px solid darken($borderColor,3%);
+    padding: 5px;
+    padding: 5px 10px 5px 30px;
+    .btn{
+        margin-top: -3px;
+    }
+}
+
+.rightPanel-content{
+    width: 100%;
+    max-height: 85vh;
+    padding: 10px;
+    overflow: auto;
+
+    .row{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+
+
+.bottomPanel{
+    position: fixed;
+    right: 0px;
+    bottom:0px;
+    height: 200px;
+    background-color: $backColor;
+    border-left: 1px solid darken($borderColor,5%);
+    border-top: 1px solid darken($borderColor,5%);
+    width: 98%;
+    z-index: 9999;
+
+    .fa{
+        cursor: pointer;
+        font-size: 22px;
+        margin-right: 6px;
+    }
+}
+
+.bottomPanel-head{
+    display: block;
+    background-color: darken($backColor,2%);
+    border-bottom: 1px solid darken($borderColor,3%);
+    padding: 5px;
+}
+
+.bottomPanel-content{
+    margin: 5px;
+}
+
+.fa-close{
+    position: absolute;
+    top:5px;
+    left: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,156 @@
+.menuOpener{
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  padding: 2px 12px;
+  margin-left: -10px;
+}
+
+.menuFix{
+  margin-left: 40px;margin-right:22px;;
+}
+
+
+// Common
+
+.nav-sidebar {
+  
+  li > a {
+    padding-right: 20px;
+    padding-left: 1px;
+    font-family: $menuFont;
+    font-size: $smallFontSize;
+  }
+
+  .active > a,
+  .active > a:hover,
+  .active > a:focus {
+    color: #fff;
+  }
+
+}
+
+.sidebar
+{
+
+  ul,li 
+  {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 35px;
+    cursor: pointer;
+  }
+
+  ul :not(collapsed) .arrow:before,
+  li :not(collapsed) .arrow:before {
+    font-family: FontAwesome;
+    content: "\f078";
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 7px;
+    vertical-align: middle;
+    float: right;
+  }
+
+  ul .first-sub-menu li,
+    li .first-sub-menu li {
+      border: none;
+      line-height: 28px;
+      margin-left: 0px;
+    }
+    
+  li a {
+    text-decoration: none;
+  }
+
+  a.menu-item{
+    margin-left: 10px;
+  }
+
+  li.selectedMenu{
+    background-color: darken($mainColor,15%)!important;
+  }
+
+}
+
+
+
+
+  
+
+
+  .menu-content {
+    border-top: 1px solid darken($mainColor, 6%);
+  }
+
+  .navbar-brand{
+    padding: 0px!important;
+  }
+
+  .col-sm-12{
+    padding-right: 0px!important;
+  }
+
+  .menuOpener{
+    display: inline-block;
+  }
+
+  
+  img.proPic{
+    vertical-align:middle;
+    height:100px;
+    width:90px;
+    border-radius: 8px;
+    margin-left:5px;
+    border: 3px solid darken($mainColor, 6%);
+  }
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color:$mainColor;
+  border-left: 10px solid darken($mainColor, 10%);
+  border-right: 3px solid darken($mainColor, 5%);
+  height: 100vh;
+  color: $darkBorder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  width: auto;
+
+
+
+  ul .first-sub-menu li,
+    li .first-sub-menu li,
+    li {
+      border-bottom: 1px solid darken($mainColor, 6%);
+      padding-left: 3px;
+  }
+
+  ul.first-sub-menu{
+    a.menu-group{
+      padding-left:15px; 
+    }
+  }
+
+  a.menu-item{    
+    font-weight: 110;
+    opacity: 1!important;
+    padding-left: 20px;
+  }
+
+  i.fa{
+    margin-right: 5px;
+  }
+
+  span.arrow{
+    font-size: 10px;
+  }
+
+}
+

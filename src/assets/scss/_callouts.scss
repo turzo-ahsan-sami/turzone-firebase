@@ -1,0 +1,75 @@
+//
+// Callouts
+//
+
+.bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+
+.bd-callout-sm{
+  padding: 0.50rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.bd-callout-md{
+  padding: 0.75rem;
+}
+
+.bd-callout h4 {
+  margin-top: 0;
+  margin-bottom: .25rem;
+}
+
+.bd-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.bd-callout code {
+  border-radius: .25rem;
+}
+
+.bd-callout + .bd-callout {
+  margin-top: -.25rem;
+}
+
+// Variations
+@mixin bs-callout-variant($color) {
+  border-left-color: $color;
+
+  h4 { color: $color; }
+}
+
+.bd-callout-info { @include bs-callout-variant($bd-info); }
+.bd-callout-warning { @include bs-callout-variant($bd-warning); }
+.bd-callout-danger { @include bs-callout-variant($bd-danger); }
+
+
+
+// NEW Callouts
+.callout {
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  code {
+    border-radius: 3px;
+  }
+  & + .bs-callout {
+    margin-top: -5px;
+  }
+}
+@each $name,$color in (default,$bd-default),(primary,$bd-primary),(success,$bd-success),(danger,$bd-danger),(warning,$bd-warning),(info,$bd-info), (bdc,#29527a) {
+  .callout-#{$name} {
+    border-left-color: $color;
+    background: lighten($color, 30%);
+  }
+}

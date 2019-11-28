@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { Home } from './Components/Home/Home';
+import { Resume } from './Components/Resume/Resume';
 import { Navbar } from './Components/Navbar/Navbar';
 import { NotFound } from './Components/NotFound/NotFound';
 
@@ -47,7 +48,7 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
       AppComponent,
 
       // Components
-      Home, Navbar, NotFound, VocabHelper, Countdown,
+      Home, Navbar, NotFound, VocabHelper, Countdown, Resume,
 
       BookList, DisplayBookList, BookEntryForm,
 

@@ -1,0 +1,416 @@
+.progress {
+    position: fixed;
+    height: 2px;
+    display: none;
+    width: 100%;
+    background-color: #03a9f4;
+    overflow: hidden;
+    margin: 0px;
+    z-index: 999999;
+    top:0px;
+    left: 0px;    
+    
+    .determinate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #26a69a;
+        -webkit-transition: width .3s linear;
+        transition: width .3s linear
+    }
+
+    .indeterminate {
+        background-color: #e7eef1;
+    }
+
+    .indeterminate:before {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        will-change: left, right;
+        -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+        animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite
+    }
+
+    .indeterminate:after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        will-change: left, right;
+        -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+        animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+        -webkit-animation-delay: 1.15s;
+        animation-delay: 1.15s
+    }
+}
+
+@-webkit-keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%
+    }
+    60% {
+        left: 100%;
+        right: -90%
+    }
+    100% {
+        left: 100%;
+        right: -90%
+    }
+}
+@keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%
+    }
+    60% {
+        left: 100%;
+        right: -90%
+    }
+    100% {
+        left: 100%;
+        right: -90%
+    }
+}
+@-webkit-keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%
+    }
+    60% {
+        left: 107%;
+        right: -8%
+    }
+    100% {
+        left: 107%;
+        right: -8%
+    }
+}
+@keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%
+    }
+    60% {
+        left: 107%;
+        right: -8%
+    }
+    100% {
+        left: 107%;
+        right: -8%
+    }
+}
+
+
+#loader {
+    bottom: 0;
+    height: 150px;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 150px;
+
+    .dot {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 87.5px;
+    }
+
+    .dot::before {
+        border-radius: 100%;
+        content: "";
+        height: 87.5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: scale(0);
+        width: 87.5px;
+    }
+
+    .dot:nth-child(7n+1) {
+        transform: rotate(45deg);
+    }
+
+    .dot:nth-child(7n+1)::before {
+        animation: 0.8s linear 0.1s normal none infinite running load;
+        background: #00ff80 none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+2) {
+        transform: rotate(90deg);
+    }
+
+    .dot:nth-child(7n+2)::before {
+        animation: 0.8s linear 0.2s normal none infinite running load;
+        background: #00ffea none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+3) {
+        transform: rotate(135deg);
+    }
+
+    .dot:nth-child(7n+3)::before {
+        animation: 0.8s linear 0.3s normal none infinite running load;
+        background: #00aaff none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+4) {
+        transform: rotate(180deg);
+    }
+
+    .dot:nth-child(7n+4)::before {
+        animation: 0.8s linear 0.4s normal none infinite running load;
+        background: #0040ff none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+5) {
+        transform: rotate(225deg);
+    }
+
+    .dot:nth-child(7n+5)::before {
+        animation: 0.8s linear 0.5s normal none infinite running load;
+        background: #2a00ff none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+6) {
+        transform: rotate(270deg);
+    }
+
+    .dot:nth-child(7n+6)::before {
+        animation: 0.8s linear 0.6s normal none infinite running load;
+        background: #9500ff none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+7) {
+        transform: rotate(315deg);
+    }
+
+    .dot:nth-child(7n+7)::before {
+        animation: 0.8s linear 0.7s normal none infinite running load;
+        background: magenta none repeat scroll 0 0;
+    }
+
+    .dot:nth-child(7n+8) {
+        transform: rotate(360deg);
+    }
+
+    .dot:nth-child(7n+8)::before {
+        animation: 0.8s linear 0.8s normal none infinite running load;
+        background: #ff0095 none repeat scroll 0 0;
+    }
+
+    .lading {
+        /* background-image: url("../images/loading.gif"); */
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        bottom: -40px;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 140px;
+    }
+}
+
+@keyframes load {
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes load {
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+
+.range {
+    display: table;
+    position: relative;
+    height: 25px;
+    margin-top: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.range input[type="range"] {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+
+    display: table-cell;
+    width: 100%;
+    background-color: transparent;
+    height: 25px;
+    cursor: pointer;
+}
+
+.range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+
+    width: 11px;
+    height: 25px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0px;
+    background-color: rgb(153, 153, 153);
+}
+
+.range input[type="range"]::-moz-slider-thumb {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    -o-appearance: none !important;
+    appearance: none !important;
+    
+    width: 11px;
+    height: 25px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0px;
+    background-color: rgb(153, 153, 153);
+}
+
+.range output {
+    display: table-cell;
+    padding: 3px 5px 2px;
+    min-width: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(153, 153, 153);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.range input[type="range"] {
+    outline: none;
+}
+
+.range.range-primary input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(66, 139, 202);
+}
+
+.range.range-primary input[type="range"]::-moz-slider-thumb {
+    background-color: rgb(66, 139, 202);
+}
+
+.range.range-primary output {
+    background-color: rgb(66, 139, 202);
+}
+
+.range.range-primary input[type="range"] {
+    outline-color: rgb(66, 139, 202);
+}
+
+.range.range-success input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(92, 184, 92);
+}
+
+.range.range-success input[type="range"]::-moz-slider-thumb {
+    background-color: rgb(92, 184, 92);
+}
+
+.range.range-success output {
+    background-color: rgb(92, 184, 92);
+}
+
+.range.range-success input[type="range"] {
+    outline-color: rgb(92, 184, 92);
+}
+
+.range.range-info input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(91, 192, 222);
+}
+
+.range.range-info input[type="range"]::-moz-slider-thumb {
+    background-color: rgb(91, 192, 222);
+}
+
+.range.range-info output {
+    background-color: rgb(91, 192, 222);
+}
+
+.range.range-info input[type="range"] {
+    outline-color: rgb(91, 192, 222);
+}
+
+.range.range-warning input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(240, 173, 78);
+}
+
+.range.range-warning input[type="range"]::-moz-slider-thumb {
+    background-color: rgb(240, 173, 78);
+}
+
+.range.range-warning output {
+    background-color: rgb(240, 173, 78);
+}
+
+.range.range-warning input[type="range"] {
+    outline-color: rgb(240, 173, 78);
+}
+
+.range.range-danger input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(217, 83, 79);
+}
+
+.range.range-danger input[type="range"]::-moz-slider-thumb {
+    background-color: rgb(217, 83, 79);
+}
+
+.range.range-danger output {
+    background-color: rgb(217, 83, 79);
+}
+
+.range.range-danger input[type="range"] {
+    outline-color: rgb(217, 83, 79);
+}

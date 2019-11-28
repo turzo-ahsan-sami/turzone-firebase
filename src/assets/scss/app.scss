@@ -1,13 +1,21 @@
-.custom-button{
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "customVars";
+@import "navbar";
+@import "sidebar";
+@import "table";
+@import "panel";
+@import "switch";
+@import "breadcrumb";
+@import "callouts";
+@import "mobile";
+@import "custom";
+@import "controls";
+@import "responsive";
+@import "customWidth";
+@import "myCustom";
+@import "resumeCustom";
 
-    button{
-        border: none;
-        margin: 5px;
-        border-radius: 0%;
-        border-bottom: 1px solid rgba($color: grey, $alpha: 0.5);
-    }
-
-    button:hover{
-       border: 1px solid rgba($color: grey, $alpha: 0.3);
-    }
-}
+@import "progress";
+@import "FixedHeaderTable";
+@import "theme.default";
+// @import "custom-font";

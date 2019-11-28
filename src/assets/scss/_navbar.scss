@@ -1,0 +1,45 @@
+.navbar{
+    background-color: $mainColor;
+    border-bottom: 4px solid $secondColor;
+    min-height: 40px;
+    padding: 0px 10px;
+
+    a.navbar-brand{
+        font-family: $ubuntoFont;
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        padding: 0px 10px;    
+    }
+
+    .navbar-nav{
+        a{
+            color:white;
+            text-decoration: none;
+        }
+    }
+
+    .nav-item:hover{
+        background-color: darken($mainColor, 8%) ;
+        cursor: pointer;
+    }
+
+
+}
+
+.favoriteMenu{
+    position: fixed;
+    width: 900px;
+    margin-left:-450px;
+    left: 50%;
+
+    a{
+        font-size: 12px;
+    }
+}
+
+.navbar-toggler{
+    padding: 0.20rem 0.40rem;
+}

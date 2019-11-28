@@ -1,0 +1,179 @@
+// Large Desktop
+@media (min-width: 1370px) {
+    
+    .rightPanel-content{
+        max-height: 88vh;
+    }
+}
+
+// Desktop
+@media (min-width: 768px) {
+    .menuOpener{
+      display: none;
+    }
+  
+    .sidebar{
+      display: none;
+      min-width: 320px;
+    }
+  
+    .sidebarPanel{
+        position: fixed;
+        top:39px;
+        left: 0px;
+        width: 30px;
+        background-color: $mainColor;
+        height: 100vh; 
+        color: white;
+        z-index: 9999;
+        padding: 0px; 
+    }
+  
+    .vertical-text {
+        transform: rotate(90deg);
+        color: white;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .rightPanel{
+        right: 0px;
+    }
+
+
+    .vh-1{
+        max-height: 10vh;//min-height: 7vh;
+    }
+    .vh-13{
+        max-height: 13vh;//min-height: 7vh;
+    }
+    .vh-15{
+        max-height: 15vh;//min-height: 7vh;
+    }
+    .vh-17{
+        max-height: 17vh;//min-height: 7vh;
+    }
+    .vh-2{
+        max-height: 20vh;//min-height: 17vh;
+    }
+    .vh-3{
+        max-height: 30vh;//min-height: 27vh;
+    }
+    .vh-4{
+        max-height: 40vh;//min-height: 39vh;
+    }
+    .vh-5{
+        max-height: 50vh;//min-height: 49vh;
+    }
+    .vh-6{
+        max-height: 60vh;//min-height: 59vh;
+    }
+    .vh-7{
+        max-height: 70vh;//min-height: 69vh;
+    }
+    .vh-8{
+        max-height: 80vh;//min-height: 79vh;
+    }
+    .vh-9{
+        max-height: 90vh;//min-height: 89vh;
+    }
+    .vh-10{
+        max-height: 99vh;//min-height: 99vh;
+    }
+    
+    .vh-1, .vh-13, .vh-15, .vh-17, 
+    .vh-2,.vh-3,.vh-4,.vh-5,.vh-6,.vh-7,.vh-8,.vh-9,.vh-10{
+        overflow: auto;
+    }
+
+    .fa-times-circle{
+        font-size:18px;
+    }
+
+    .rightPanel-content{
+        max-height: 83vh!important;
+    }
+
+
+   
+
+}
+  
+  
+
+  
+
+
+
+// Mobile
+@media (max-width: 720px) {
+
+    .errorAlert{
+        left: 5px!important;
+        max-width: 360px!important;
+    }
+
+    .rightPanel{        
+        width: 90%;
+        height: 98vh;
+        max-width: 340px;
+        min-height: 760px;
+        background-color: $backColor;
+        border-left: 1px solid darken($borderColor,5%);
+        z-index: 9999;
+        left: 0px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow: auto;
+
+        .rightPanel-footer{
+            bottom:60px!important;
+        }
+    }
+
+    
+    .mainContent{
+        max-width: 100%!important;
+    }
+
+    .sidebar{
+        width: 90%;
+        max-width: 340px;
+        min-height: 760px;
+
+        .fa-times-circle{
+            color: lighten($mainColor, 30);
+            font-size:22px!important;
+        }
+    }
+
+    .sidebarPanel
+    {
+        display: none;
+        width: 0px;    
+    }
+
+    .hidden-sm, .favoriteMenu, .btn-print{
+        display: none;
+    }
+    .menuFix{
+        margin: 0px;
+    }
+
+    
+
+}
+
+
+// Large Desktop
+@media (min-width: 1400px) {
+
+    .vh-1, .vh-13, .vh-15, .vh-17, 
+    .vh-2,.vh-3,.vh-4,.vh-5,.vh-6,.vh-7,.vh-8,.vh-9,.vh-10{
+        max-height: auto;
+    }
+
+    
+}
+
+
+
