@@ -11,3 +11,28 @@
        border: 1px solid rgba($color: grey, $alpha: 0.3);
     }
 }
+
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
+}
+
+
+.ul-none{
+    color: brown;
+    list-style: none;
+    list-style-type: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
