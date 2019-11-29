@@ -48,11 +48,7 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
       AppComponent,
 
       // Components
-<<<<<<< HEAD
-      Home, Resume, Navbar, NotFound, VocabHelper, Countdown,
-=======
       Home, Navbar, NotFound, VocabHelper, Countdown, Resume,
->>>>>>> 298a094a225266ef746f5d0030ddacea8f709350
 
       BookList, DisplayBookList, BookEntryForm,
 
