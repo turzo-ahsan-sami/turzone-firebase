@@ -9849,13 +9849,15 @@ i {
   text-align: justify; }
 
 .ul-none {
-  color: brown;
   list-style: none;
   list-style-type: none;
   padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em; }
+
+ul {
+  list-style-type: none; }
 
 h1, h2, h3 {
   margin: 0;
