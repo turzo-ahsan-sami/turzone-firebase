@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { config } from './config';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +19,7 @@ import { NotFound } from './Components/NotFound/NotFound';
 
 
 // Projects
+import { ToDo } from './Components/Projects/ToDo/ToDo';
 import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
 import { BookList } from './Components/Projects/BookList/BookList';
 import { DisplayBookList } from './Components/Projects/BookList/DisplayBookList/DisplayBookList';
@@ -26,6 +31,7 @@ import { Countdown } from './Components/Projects/Countdown/Countdown';
 
 // Services
 import { MasterService } from './Services/master.service';
+import { TodoService } from './Services/todo.service';
 
 // Directives
 import { TimeCounterDirective } from './Directives/timeCounter.directive';
@@ -48,7 +54,7 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
       AppComponent,
 
       // Components
-      Home, Navbar, NotFound, VocabHelper, Countdown, Resume,
+      Home, Navbar, NotFound, VocabHelper, Countdown, Resume, ToDo,
 
       BookList, DisplayBookList, BookEntryForm,
 
@@ -68,11 +74,14 @@ import { NumberToRoman } from './Pipes/NumberToRoman.pipe';
     ReactiveFormsModule, 
     FormsModule,      
     AppRoutingModule, 
+    AngularFireModule.initializeApp(config.firebaseConfig),
+    AngularFireDatabaseModule
   ],
 
   providers:[
       // Services
       MasterService,
+      TodoService
   ],
 
   bootstrap: [AppComponent]

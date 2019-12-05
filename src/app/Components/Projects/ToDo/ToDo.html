@@ -1,0 +1,44 @@
+<div class="container" style="padding: 1em;">
+
+    <div class="jumbotron">
+        <h4 class="text-center">To Do List</h4>
+    </div>
+
+    <div class="col-12 row">
+
+        <div class="col-8">
+
+            <ul class="list-group">
+                <ng-container *ngFor="let item of toDoListArray">
+                    <li class="list-group-item">
+                        <span class="hover-cursor" [class.text-success]="item?.isChecked"
+                            (click)="onChangeTitleState(item)">
+                            <i class="fa fa-lg"
+                                [ngClass]="item?.isChecked ? 'fa-check-circle-o' : 'fa-circle-thin'"></i>
+                        </span>
+                        <small style="padding-left: 5px;">{{item?.time}}</small>
+                        <span style="padding-left: 5px;"> |  {{item?.title}}</span>
+                        <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.$key)">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                        </span>
+                    </li>
+                </ng-container>
+            </ul>
+
+        </div>
+
+        <div class="col-4">
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control form-control-lg" #itemTitle>
+                <div class="input-group-append" (click)="onAdd(itemTitle)">
+                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-plus-circle fa-lg"></i></span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

@@ -3,6 +3,7 @@ import { Utility } from './Utility';
 export class LocalStorage{
 
     public static BookListToken: string = 'book_list';
+    public static ToDoListToken: string = 'todo_list';
 
     public static getLocalStorageItem(token: string){
         var data;

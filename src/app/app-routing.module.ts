@@ -11,6 +11,7 @@ import { NotFound } from './Components/NotFound/NotFound';
 import { VocabHelper } from './Components/Projects/VocabHelper/VocabHelper';
 import { Countdown } from './Components/Projects/Countdown/Countdown';
 import { BookList } from './Components/Projects/BookList/BookList';
+import { ToDo } from './Components/Projects/ToDo/ToDo';
 
 const APP_ROUTES: Routes = [
 
@@ -22,6 +23,7 @@ const APP_ROUTES: Routes = [
   { path: 'vocabhelper', pathMatch: 'full', component: VocabHelper },
   { path: 'booklist', pathMatch: 'full', component: BookList },
   { path: 'countdown', pathMatch: 'full', component: Countdown },
+  { path: 'todo', pathMatch: 'full', component: ToDo },
   
   { path: '**', component: NotFound },
 
